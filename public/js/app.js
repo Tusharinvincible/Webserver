@@ -7,7 +7,7 @@ document
     event.preventDefault();
     // console.log("hit");
     const textInput = document.querySelector("input").value;
-
+    document.querySelector("input").value = "";
     fetch(`/weather?address=${textInput}`)
       .then((res) => {
         return res.json();
