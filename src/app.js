@@ -79,5 +79,5 @@ app.get("/help/*", (req, res) => {
 //   });
 // });
 app.listen(PORT, () => {
-  console.log("Server is Up on Port 3000");
+  console.log("Server is Up on Port " + PORT);
 });
