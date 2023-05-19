@@ -1,3 +1,18 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - echo Installing node dependencies
+      - npm install
+  build:
+    commands:
+      - nodemon src/app.js -e js,hbs
+
+artifacts:
+  files:
+    - src/app.js
+    - package.json
